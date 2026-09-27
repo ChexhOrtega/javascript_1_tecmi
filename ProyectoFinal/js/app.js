@@ -1,3 +1,10 @@
+const ingresos = [
+  new Ingreso("Salario", 20000),
+  new Ingreso("Venta auto", 50000),
+];
+
+const egresos = [new Egreso("Renta", 4000), new Egreso("Ropa", 800)];
+
 const cargarCabecero = () => {
   let presupuesto = totalIngresos() - totalEgresos();
   let porcentajeEgreso = totalEgresos() / totalIngresos();
@@ -11,13 +18,8 @@ const cargarCabecero = () => {
 const totalIngresos = () => {
   let totalIngresos = 0;
 
-  let ingresos = {
-    Quincena: 9000,
-    Venta: 400,
-  };
-
-  for (let [concepto, ingreso] of Object.entries(ingresos)) {
-    totalIngresos += ingreso;
+  for (let ingreso of ingresos) {
+    totalIngresos += ingreso.valor;
   }
 
   return totalIngresos;
@@ -26,13 +28,8 @@ const totalIngresos = () => {
 const totalEgresos = () => {
   let totalEgresos = 0;
 
-  let egresos = {
-    Renta: 900,
-    Ropa: 400,
-  };
-
-  for (let [concepto, egreso] of Object.entries(egresos)) {
-    totalEgresos += egreso;
+  for (let egreso of egresos) {
+    totalEgresos += egreso.valor;
   }
 
   return totalEgresos;
