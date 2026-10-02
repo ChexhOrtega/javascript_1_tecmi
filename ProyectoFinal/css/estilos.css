@@ -22,9 +22,11 @@ body {
 .derecha {
   float: right;
 }
+
 .rojo {
   color: #ff5049 !important;
 }
+
 .rojofocus:focus {
   border: 1px solid #ff5049 !important;
 }
@@ -152,6 +154,7 @@ body {
 .agregar_descripcion {
   width: 400px;
 }
+
 .agregar_valor {
   width: 100px;
 }
@@ -209,6 +212,7 @@ h2 {
 .ingreso_titulo {
   color: #28b9b5;
 }
+
 .egreso_titulo {
   color: #ff5049;
 }
@@ -221,6 +225,7 @@ h2 {
 .elemento:first-child {
   border-top: 1px solid #e7e7e7;
 }
+
 .elemento:nth-child(even) {
   background-color: #f7f7f7;
 }
@@ -282,9 +287,11 @@ h2 {
 .elemento:hover .elemento_eliminar--btn {
   display: block;
 }
+
 .elemento:hover .elemento_valor {
   transform: translateX(-20px);
 }
+
 .elemento:hover .elemento_porcentaje {
   transform: translateX(-20px);
 }
