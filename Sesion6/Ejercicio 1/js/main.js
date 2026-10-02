@@ -147,3 +147,10 @@ const actualizarTotales = () => {
   $("#totalCarbohidratos").text(carbohidratosTotal);
   $("#totalProteina").text(proteinaTotal);
 };
+
+const eliminarElemento = (indice) => {
+  lista.splice(indice, 1);
+
+  actualizarTotales();
+  renderElementos();
+};
