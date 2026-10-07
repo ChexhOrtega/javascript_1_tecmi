@@ -1,5 +1,5 @@
 // Autor: César Ortega
-// class Egreso extends Dato {
+class Egreso extends Dato {
   static contadorEgreso = 0;
 
   constructor(descripcion, valor) {

@@ -90,6 +90,7 @@ const eliminarIngreso = (id) => {
 
   cargarCabecero();
   cargarIngresos();
+  cargarEgresos();
 };
 
 const cargarEgresos = () => {
@@ -103,11 +104,17 @@ const cargarEgresos = () => {
 };
 
 const crearEgresoHTML = (egreso) => {
+  let ingresosTotales = totalIngresos();
+  let porcentajeEgreso =
+    ingresosTotales === 0 ? 0 : egreso.valor / ingresosTotales;
   let egresoHTML = `    
     <div class="elemento limpiarEstilos">
       <div class="elemento_descripcion">${egreso.descripcion}</div>
       <div class="derecha limpiarEstilos">
         <div class="elemento_valor">${formatoMoneda(egreso.valor)}</div>
+        <div class="elemento_porcentaje">
+          ${formatoPorcentaje(porcentajeEgreso)}
+        </div>
         <div class="elemento_eliminar">
           <button class="elemento_eliminar--btn">
             <ion-icon name="close-circle-outline" onclick="eliminarEgreso(${egreso.id})"></ion-icon>
