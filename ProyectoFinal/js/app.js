@@ -6,13 +6,16 @@ const ingresos = [
 const egresos = [new Egreso("Renta", 4000), new Egreso("Ropa", 800)];
 
 const cargarCabecero = () => {
-  let presupuesto = totalIngresos() - totalEgresos();
-  let porcentajeEgreso = totalEgresos() / totalIngresos();
+  let ingresosTotales = totalIngresos();
+  let egresosTotales = totalEgresos();
+  let presupuesto = ingresosTotales - egresosTotales;
+  let porcentajeEgreso =
+    ingresosTotales === 0 ? 0 : egresosTotales / ingresosTotales;
 
   document.getElementById("presupuesto").innerHTML = formatoMoneda(presupuesto);
   document.getElementById("ingresos").innerHTML =
-    formatoMoneda(totalIngresos());
-  document.getElementById("egresos").innerHTML = formatoMoneda(totalEgresos());
+    formatoMoneda(ingresosTotales);
+  document.getElementById("egresos").innerHTML = formatoMoneda(egresosTotales);
   document.getElementById("porcentaje").innerHTML =
     formatoPorcentaje(porcentajeEgreso);
 };
