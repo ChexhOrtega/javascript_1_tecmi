@@ -15,8 +15,8 @@ const cargarCabecero = () => {
 
   document.getElementById("presupuesto").innerHTML = formatoMoneda(presupuesto);
   document.getElementById("ingresos").innerHTML =
-    formatoMoneda(ingresosTotales);
-  document.getElementById("egresos").innerHTML = formatoMoneda(egresosTotales);
+    formatoMoneda(ingresosTotales) + " MXN";
+  document.getElementById("egresos").innerHTML = formatoMoneda(egresosTotales) + " MXN";
   document.getElementById("porcentaje").innerHTML =
     formatoPorcentaje(porcentajeEgreso);
 };
@@ -71,7 +71,7 @@ const crearIngresoHTML = (ingreso) => {
     <div class="elemento limpiarEstilos">
       <div class="elemento_descripcion">${ingreso.descripcion}</div>
       <div class="derecha limpiarEstilos">
-        <div class="elemento_valor">${formatoMoneda(ingreso.valor)}</div>
+        <div class="elemento_valor">${formatoMoneda(ingreso.valor)} MXN</div>
         <div class="elemento_eliminar">
           <button class="elemento_eliminar--btn">
             <ion-icon name="close-circle-outline" onclick="eliminarIngreso(${ingreso.id})"></ion-icon>
@@ -111,7 +111,7 @@ const crearEgresoHTML = (egreso) => {
     <div class="elemento limpiarEstilos">
       <div class="elemento_descripcion">${egreso.descripcion}</div>
       <div class="derecha limpiarEstilos">
-        <div class="elemento_valor">${formatoMoneda(egreso.valor)}</div>
+        <div class="elemento_valor">${formatoMoneda(egreso.valor)} MXN</div>
         <div class="elemento_porcentaje">
           ${formatoPorcentaje(porcentajeEgreso)}
         </div>
