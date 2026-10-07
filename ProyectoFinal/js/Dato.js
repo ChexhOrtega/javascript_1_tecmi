@@ -1,3 +1,4 @@
+// Autor: César Ortega
 const _private = new WeakMap();
 
 class Dato {

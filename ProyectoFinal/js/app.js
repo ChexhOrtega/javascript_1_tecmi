@@ -1,3 +1,4 @@
+// Autor: César Ortega
 const ingresos = [
   new Ingreso("Salario", 20000),
   new Ingreso("Venta auto", 50000),

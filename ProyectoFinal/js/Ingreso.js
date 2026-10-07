@@ -1,3 +1,4 @@
+// Autor: César Ortega
 class Ingreso extends Dato {
   static contadorIngreso = 0;
 
